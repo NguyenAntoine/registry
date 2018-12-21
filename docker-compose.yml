@@ -1,6 +1,6 @@
 version: "2"
 services:
-  repository:
+  registry:
     image: registry:2
     expose:
       - 5000
