@@ -18,6 +18,7 @@ services:
       - 5000
     networks:
       - default
+      - reverse-proxy
     env_file:
       - .env
     volumes:
