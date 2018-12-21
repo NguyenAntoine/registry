@@ -1,6 +1,6 @@
 version: "2"
 services:
-  registry:
+  registry-ui:
     image: joxit/docker-registry-ui:static
     expose:
       - 80
@@ -9,6 +9,15 @@ services:
       - reverse-proxy
     env_file:
       - .env
+    restart: always
+  registry:
+    image: registry:2
+    expose:
+      - 5000
+    networks:
+      - default
+    volumes:
+      - ./registry:/var/lib/registry
     restart: always
 networks:
   reverse-proxy:
