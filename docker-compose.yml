@@ -1,6 +1,6 @@
 version: "2"
 services:
-  rancher:
+  repository:
     image: registry:2
     expose:
       - 5000
