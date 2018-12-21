@@ -1,0 +1,19 @@
+version: "2"
+services:
+  rancher:
+    image: registry:2
+    expose:
+      - 5000
+    networks:
+      - default
+      - reverse-proxy
+    volumes:
+      - ./registry:/var/lib/registry
+    env_file:
+      - .env
+    restart: always
+networks:
+  reverse-proxy:
+    external:
+      name: reverse-proxy
+
