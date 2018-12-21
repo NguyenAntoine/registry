@@ -1,6 +1,6 @@
 # Registry docker-compose
 
-[Using Registry Docker Image](https://docs.docker.com/registry/deploying/)
+[Using Registry UI Docker Image](https://hub.docker.com/r/joxit/docker-registry-ui/)
 
 ## Installation
 
