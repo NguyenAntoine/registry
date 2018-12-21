@@ -1,7 +1,7 @@
 version: "2"
 services:
   registry:
-    image: joxit/docker-registry-ui
+    image: joxit/docker-registry-ui:static
     expose:
       - 80
     networks:
