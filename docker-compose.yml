@@ -7,6 +7,8 @@ services:
     networks:
       - default
       - reverse-proxy
+    depends_on:
+      - registry
     env_file:
       - .env
     restart: always
