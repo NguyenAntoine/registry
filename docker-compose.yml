@@ -10,7 +10,7 @@ services:
     depends_on:
       - registry
     env_file:
-      - .env
+      - .env.ui
     restart: always
   registry:
     image: registry:2
@@ -18,6 +18,8 @@ services:
       - 5000
     networks:
       - default
+    env_file:
+      - .env
     volumes:
       - ./registry:/var/lib/registry
     restart: always
